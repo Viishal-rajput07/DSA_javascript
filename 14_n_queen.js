@@ -58,9 +58,9 @@ let queens = function (n) {
         //try placing a queen in each column of the current row
         for (let col = 0; col < n; col++) {
             if (isValid(row, col, board)) {
-                board[row][col] = 'Q'    //place the queen
-                backtrack(board, row + 1)   // move to the next row
-                board[row][col] = '.'      // backtrack, remove the queen
+                board[row][col] = 'Q'        // place the queen
+                backtrack(board, row + 1)    //  move to the next row
+                board[row][col] = '.'        //   backtrack, remove the queen
             }
         }
     }

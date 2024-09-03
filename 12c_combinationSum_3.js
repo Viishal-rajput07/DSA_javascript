@@ -36,3 +36,5 @@ var combinationSum3 = function(k, n) {
     backtrack(1, [], 0); // Start recursion with the number 1
     return res;
 };
+console.log(combinationSum3(2, 5));
+
