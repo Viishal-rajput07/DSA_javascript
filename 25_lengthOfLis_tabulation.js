@@ -39,7 +39,7 @@ const lengthOfLisOptimized = (nums) => {
             }
 
         }
-        if (dp[i] > max) max = dp[i]
+        if (dp[i] > max) (max = dp[i])
     }
 
     return max
