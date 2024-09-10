@@ -1,3 +1,15 @@
+
+/*
+Coding Exercise: Longest Palindromic Substring
+Given a string s, return the longest  palindromic substring in s.
+
+
+
+Example :
+
+Input: s = "pabad"
+Output: "aba"
+*/
 // Approach 1: Tabulation, T=O(n^2) , S=O(n^2)
 const longestPalindromeSubstr = (s) =>{
     
@@ -28,4 +40,4 @@ const longestPalindromeSubstr = (s) =>{
     return longest
 }
 
-console.log(longestPalindromeSubstr("abccba"))
+console.log(longestPalindromeSubstr("pabad"))
