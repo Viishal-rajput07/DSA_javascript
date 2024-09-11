@@ -55,4 +55,4 @@ const palindromePartition = (s) => {
     return res
 }
 
-console.log(palindromePartition('ppq'));
+console.log(palindromePartition('ram'));

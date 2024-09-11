@@ -28,3 +28,49 @@ const minCuts = (s)  =>{
 } 
 
 console.log(minCuts("abc"));
+
+
+// Approach 4: Tabulation, T=0(n^2)  S=0(n^2)
+const cutsMin = (s) =>{
+
+    let n = s.length;
+
+    let isPalindrome = Array.from(Array(n), ()=>Array(n).fill(false))
+
+    for(let l = 1; l<= n; l++){
+        for(let i = 0; i<=n-l; i++){
+            let j = i + l -1;
+
+            if(i===j){
+                isPalindrome[i][j] = true
+            }
+            else if(s[i] === s[j] && (j === i+1 || isPalindrome[i+1][j-1])){
+                isPalindrome[i][j] = true
+            }
+            else{
+                isPalindrome[i][j] = false
+            }
+        }
+    }
+
+    let dp = Array(n).fill(0)
+
+    for(let end = 0; end<n; end++){
+        let minCuts = end
+        for(let start = 0; start <=end; start++){
+            if(isPalindrome[start][end]){
+                if(start === 0){
+                    minCuts = 0 
+                }
+                else{
+                    minCuts = Math.min(minCuts, 1+dp[start-1])
+                }
+            }
+        }
+        dp[end] = minCuts
+    }
+
+    return dp[n-1]
+}
+
+console.log(cutsMin('abc'))
