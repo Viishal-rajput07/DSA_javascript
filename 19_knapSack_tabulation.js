@@ -39,7 +39,7 @@ const knapSachTabultaion = (W, wt, val, n) => {
     return dp[n][W] 
 }
 
-console.log(knapSachTabultaion(50, [10, 20, 30, 40], [100, 100, 120, 150], 4))
+console.log(knapSachTabultaion(3, [1,2,3], [3,2,1], 3))
 
 
 // Approach 4: Space Optimized Tabulation / Bottom Up, T=O(n*W) , S=O(W)

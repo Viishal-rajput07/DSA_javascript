@@ -48,11 +48,11 @@ const wordBreak2 = (s, wordDict) =>{
     for(let i = 0; i<n; i++){
         for(let word of wordDict){
             if(i < word.length-1){
-            console.log(word, i)
+            // console.log(word, i)
                 continue
             }
             else if(s.substring(i - word.length + 1, i+1) === word){
-            console.log(word, i)
+            // console.log(word, i)
                 
                 if(i===word.length-1 || dp[i-word.length]){
                     dp[i] = true
