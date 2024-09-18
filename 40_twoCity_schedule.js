@@ -5,6 +5,8 @@ of flying the ith person to city a is aCosti, and the cost of flying the ith per
 
 Return the minimum cost to fly every person to a city such that exactly n people arrive in each city.
 */
+
+// T=O(nlogn) | S=O(1)
 const twoCityScheduleCost = (arr) =>{
     let n = arr.length
     arr.sort((a,b) => ((a[0]-a[1]) - (b[0]-b[1])))
